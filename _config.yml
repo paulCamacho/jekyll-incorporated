@@ -49,7 +49,9 @@ destination: ./_site
 plugins:     ./_plugins
 layouts:     ./_layouts
 include:     ['.htaccess']
-exclude:     []
+exclude:     ['codekit-config.json', 'config.rb', 'Gemfile', 'Gemfile.lock', 'Rakefile']
+# The following line let us use compass --watch or codekit to process the scss
+keep_files:  ['css']
 timezone:    nil
 
 # Show future posts
@@ -107,21 +109,3 @@ kramdown:
 
 redcloth:
   hard_breaks: true
-
-#
-# jekyll-assets: see more at https://github.com/ixti/jekyll-assets
-#
-assets:
-
-  dirname: assets
-  baseurl: /blog/assets/
-  sources:
-    - _assets/javascripts
-    - _assets/stylesheets
-    - _assets/images
-  js_compressor: uglifier
-  css_compressor: sass
-  cachebust: none
-  cache: false
-  gzip: [ text/css, application/javascript ]
-  debug: false
