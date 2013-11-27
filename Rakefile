@@ -12,6 +12,7 @@ GITHUB_REPONAME = ""
 namespace :site do
   desc "Generate blog files"
   task :generate do
+    puts 'GENERATING BLOG FILES'
     Jekyll::Site.new(Jekyll.configuration({
       "source"      => ".",
       "destination" => "_site"
