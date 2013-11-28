@@ -1,54 +1,81 @@
 ---
 layout: base
 ---
-<div class="blog-cover" style="background-image:url({{ site.baseurl }}/images/{{ site.inc.cover_image }});">
-
-    <section>
-        <div class="container">
-            <h1>{{ site.inc.title }}</h1>
-            {% if site.inc.subtitle %}<h3>{{ site.inc.subtitle }}</h3>{% endif %}
-
-            {% if site.inc.twitter %}
-            <a href="https://twitter.com/{{ site.inc.twitter }}" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter"></i></a>
-            {% endif %}
-            {% if site.inc.facebook %}
-            <a href="http://facebook.com/{{ site.inc.facebook }}" title="Like on Facebook" target="_blank"><i class="icon icon-facebook"></i></a>
-            {% endif %}
-            <a href="{{ site.baseurl }}/feed.xml" title="RSS Feed">
-                <i class="icon icon-rss"></i>
-            </a>
-        </div>
-    </section>
-</div>
 
 
-<article class="container">
-{% for post in paginator.posts %}
-  {% unless post.draft %}
-    <section class="index">
-        <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %}-->
-        <div>
-            <h2 class="title"><a href="{{ site.baseurl }}{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
-            <p>{{ post.excerpt }}</p>
-            <div class="meta">
-                Written By <address>{{ post.author.name }}</address> &mdash;
-                <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%B %d, %Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+
+        <div class="features feature-container" id="features">
+
+            <div class="feature feature-left">
+                <figure class="feature-image">
+                    <img src="img/espresso.jpg" alt="Talk over espresso" id="feature-img-dialogue">
+                </figure>
+                <div class="feature-description">
+                    <h2>Great stories deserve great dialogue.</h2>
+                    <p>Building something together starts with meaningful conversation. We make the time to talk, because the better we know you and understand your audience, the better we can tell your story.</p>
+                </div>
             </div>
+
+            <hr class="feature-divider">
+
+            <div class="feature feature-right">
+                <figure class="feature-image">
+                    <img src="img/enso.jpg" alt="Zen ensō symbol" id="feature-img-simple">
+                </figure>
+                <div class="feature-description">
+                    <h2>Simple is beautiful.</h2>
+                    <p>Great design is clear, intentional, honest. We are passionate about eliminating clutter in everything we do. This translates into elegant sites that load quickly and keep the focus on your content.</p>
+                </div>
+            </div>
+
+            <hr class="feature-divider">
+
+            <div class="feature feature-left">
+                <figure class="feature-image">
+                    <img src="img/glasses.jpg" alt="Sweet rimmed glasses" id="feature-img-smart">
+                </figure>
+                <div class="feature-description">
+                    <h2>Smart is sexy.</h2>
+                    <p>Your website deserves intelligent solutions, not just cosmetic fixes. We pride ourselves on thoughtful design: every element, every piece of content, every step of your user experience is considered in relation to the whole. That’s beauty and brains.</p>
+                </div>
+            </div>
+
+            <hr class="feature-divider">
+
+            <div class="feature feature-right">
+                <figure class="feature-image">
+                    <img src="img/screens.png" alt="Responsive devices" id="feature-img-responsive">
+                </figure>
+                <div class="feature-description">
+                    <h2>The internet fits in your pocket.</h2>
+                    <p>Your website should fit there too. We build responsively, so that your site adapts to any screen size. No need for a separate “mobile” site: your content will auto-magically adjust to whatever phone, tablet, or computer your customers are using.</p>
+                </div>
+            </div>
+
+            <hr class="feature-divider">
+
+            <div class="feature feature-left">
+                <figure class="feature-image">
+                    <img src="img/search.png" alt="Search engine homepage" id="feature-img-search">
+                </figure>
+                <div class="feature-description">
+                    <h2>Get found fast.</h2>
+                    <p>If your customers can’t find you, they’ll never know how great you are. We optimize for search engines and social media sites, so you never get lost. That means building clean code to keep load times down. And it means developing a social media strategy to introduce you to the world.</p>
+                </div>
+            </div>
+
+            <hr class="feature-divider">
+
+            <div class="feature feature-right">
+                <figure class="feature-image">
+                    <img src="img/cans.jpg" alt="Facilitate Connections, Communicate Value" id="feature-img-communicate">
+                </figure>
+                <div class="feature-description">
+                    <h2>Communicate Clearly.</h2>
+                    <p>A great website facilitates connections and communicates value. Every line of code we write serves the human side of the web. Let us handle the technical stuff. That makes it easier for you to delight and inspire.</p>
+                </div>
+            </div>
+
         </div>
-        <hr>
+
     </section>
-    {% endunless %}
-    {% endfor %}
-    <section class="pagination" style="text-align:center">
-      {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-        <a href="/" class="btn btn-outline">‹ Newer</a>
-        {% else %}
-        <a href="/page{{ paginator.previous_page }}" class="btn btn-outline">‹ Newer</a>
-        {% endif %}
-      {% endif %}
-      {% if paginator.next_page %}
-        <a href="/page{{ paginator.next_page }}" class="btn btn-outline">Older ›</a>
-      {% endif %}
-    </section>
-</article>

@@ -2,7 +2,7 @@ inc:
   # Blog Information
   title:        "Fizzy Journal"
   subtitle:     "We Are Digital Storytellers."
-  cover_image:  blog-cover.jpg
+  cover_image:  mountaineer.jpg
   logo:         logo.png
 
   # Company information
@@ -62,8 +62,8 @@ pygments:    true
 
 relative_permalinks: true
 
-permalink:     pretty
-paginate_path: 'page:num'
+permalink:     "/blog/:categories/:year/:month/:day/:title.html"
+paginate_path: 'blog/page:num'
 paginate: 10
 
 markdown:      maruku
@@ -75,7 +75,7 @@ excerpt_separator: "<!-- more -->"
 safe:        false
 host:        0.0.0.0
 port:        4000
-baseurl:     /blog
+baseurl:     ""
 lsi:         false
 
 maruku:
