@@ -1,0 +1,39 @@
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+//
+// -----------------------
+// SASS ENVIRONMENT
+// -----------------------
+//
+// Tie all of the imports and modules (variables, functions, mixins)
+// into a base partial for easy access to the Sass environment
+//
+// url: http://thesassway.com/beginner/how-to-structure-a-sass-project
+//
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+
+
+
+// ------------------------------------------------------------------------- //
+// IMPORT SASS EXTENSIONS
+// ------------------------------------------------------------------------- //
+
+// COMPASS: Sass helper exention
+// url: http://compass-style.org/
+@import "compass";
+
+// BREAKPOINT: Media query management made easy
+// url: http://breakpoint-sass.com/
+@import "breakpoint";
+
+// SUSY (Next): Responsive grids for Compass
+// url: http://susy.oddbird.net/
+// url: http://oddbird.net/2013/05/03/susy-next-alpha-2/
+@import "susy";
+
+
+
+// ------------------------------------------------------------------------- //
+// PULL IN MODULES - VARIABLES, FUNCTIONS, MIXINS
+// ------------------------------------------------------------------------- //
+
+@import "elements/all";

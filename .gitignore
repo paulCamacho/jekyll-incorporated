@@ -1,3 +1,10 @@
 _site/
 .DS_Store
-.sass-cache
+.sass-cache# ignore Mac OS X Desktop Service Store
+.DS_Store
+
+# ignore debug.log
+wp-content/debug.log
+
+# ignore sass-cache
+/.sass-cache/*

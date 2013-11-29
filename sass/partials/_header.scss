@@ -1,0 +1,23 @@
+/* Header
+-------------------------------------------------------------- */
+
+.header {
+    text-align: center;
+    background-color: $header-background-color;
+    margin-bottom: 4em;
+    padding: 1em 0;
+
+    @include breakpoint($iPad) {
+        padding: 0.8em 0;
+    }
+
+}
+
+.logo {
+    width: 180px;
+
+    @include breakpoint($iPad) {
+        float:left;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,88 @@
+/*!
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+ ------------
+ HERO IMAGE
+ ------------
+
+ A background image covering the entire screen
+ Along with a heading and some sub-text
+ All responsive and mobile-first
+
+ Inspiration taken from Playground Inc.
+ url: http://playgroundinc.com/
+
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ */
+
+
+.hero {
+    text-align: center;
+    color: $hero-color;
+
+    padding-top: 5em;
+
+    background-image: url("../img/mountaineer.jpg");
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    -webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    background-size: auto 100%;
+
+    height: 400px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    position: relative;
+    margin-top: -4em;
+
+    @include breakpoint($iPad) {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: auto cover;
+        height: 31em;
+        padding-top: 11em;
+    }
+
+    h1 {
+        color: $hero-color;
+        @include breakpoint(max-width $small-tablet) {
+            font-size: 3em;
+        }
+    }
+
+    p {
+        line-height: 1.4;
+    }
+
+    a {
+        color: $hero-color;
+    }
+}
+
+.more-info {
+    font-size: 0.8em;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    @include transition(opacity, 0.3s, ease);
+    padding-bottom: 0.66666667em;
+    margin-bottom: 0;
+
+    @include breakpoint($iPad) {
+        padding-bottom: 2em;
+    }
+
+    a.icon {
+        margin-top: 10px;
+    }
+}

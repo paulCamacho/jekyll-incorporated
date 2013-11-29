@@ -1,0 +1,32 @@
+/*!
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+ --------------
+ SIMPLE RESET
+ --------------
+
+ A simple reset, mostly just zeroing out margin, padding, and border
+
+ Only thing complicated here is the introduction of border-box sizing
+ url: http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+ We'll use normalize.css to get things looking similar across browsers
+
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,code,del,dfn,em,img,q,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+    margin:0;
+    padding:0;
+    border:0;
+    font-weight:inherit;
+    font-style:inherit;
+    font-size:100%;
+    font-family:inherit;
+    vertical-align:baseline;
+}
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+    @include box-sizing(border-box);
+}

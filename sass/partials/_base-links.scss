@@ -1,0 +1,42 @@
+/* Links
+   ----------------------------------- */
+
+a{
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover{
+        color: $link-hover-color;
+    }
+}
+
+%hN {
+    a {
+        color: $heading-color;
+
+        &:hover{
+            color: $heading-hover-color;
+        }
+    }
+}
+
+nav {
+    a {
+        color: $nav-color;
+
+        &:hover {
+            color: $nav-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+footer {
+    a {
+        color: $footer-link-color;
+
+        &:hover {
+            color: adjust-lightness($footer-link-color, -30);
+        }
+    }
+}

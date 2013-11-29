@@ -1,0 +1,49 @@
+/* Footer
+   ----------------------------------- */
+
+footer {
+    color: $footer-color;
+    background-color: $footer-background-color;
+    padding: 2em 0 1em;
+}
+
+.contact {
+    margin: 2em 0 1em;
+    padding: 0;
+    text-align: center;
+
+    > li {
+        list-style-image: none;
+        list-style-type: none;
+        margin-top: 0.5em;
+        display: inline;
+        padding: 0 1em;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        [data-icon]:before {
+            vertical-align: -15%;
+        }
+    }
+}
+
+.colophon {
+    font-size: $small-font;
+}
+
+.to-top {
+    text-align: center;
+    margin: 1em 0 2em;
+}
+
+.copyright {
+    font-size: $small-font;
+    text-align: center;
+    margin-bottom: 0;
+}

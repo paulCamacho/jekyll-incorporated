@@ -1,0 +1,9 @@
+# Deny access to the top-level git repository:
+RewriteEngine On
+RewriteRule \.git - [F,L]
+
+# Remove the need for .html:
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html

@@ -1,0 +1,87 @@
+/*!
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+ ------------
+ ABOUT PAGE
+ ------------
+
+ Custom styles for the About page
+ Base styles provided by _post.scss
+
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ */
+
+
+/* About Images
+   ----------------------------------- */
+
+.about-book {
+    width: 10em;
+}
+
+.about-fizz {
+    width: 10em;
+    margin-left: -1.2em;
+}
+
+
+/* About Team Member Layout
+   ----------------------------------- */
+
+.about-team {
+    @include container();
+}
+
+.team-member {
+    text-align: center;
+    margin: 2em 0;
+    @include span(12 of 12);
+
+    ul {
+        list-style: none;
+        list-style-image: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.team-member-portrait {
+    > img {
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        width: 50%;
+    }
+}
+
+.team-member-twitter {
+    margin: -1em 0 1em;
+}
+
+@include breakpoint($small-tablet) {
+
+    .team-member {
+       text-align: left;
+       margin: 1em 0;
+
+       li {
+           display: inline;
+       }
+
+    }
+
+    .team-member-description {
+        margin-top: 0.5em;
+    }
+
+    .team-member-portrait {
+        @include span(5 of 12);
+        > img {
+            width: 80%;
+        }
+    }
+
+    .team-member-description {
+        @include span(last 7 of 12);
+    }
+
+}

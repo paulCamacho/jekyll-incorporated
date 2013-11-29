@@ -1,0 +1,91 @@
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+//
+// ----------------
+// FONT VARIABLES
+// ----------------
+//
+// 1. Global font variables
+// 2. Typeplate variables
+// 3. Tyeplate-dependent variables
+//
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+
+
+// ------------------------------------------------------------------------- //
+// 1. GLOBAL FONT VARIABLES
+// ------------------------------------------------------------------------- //
+
+
+// FONT WEIGHT VARIABLES
+// ----------------------------------- //
+
+// Derived from Typekit specifications
+$light-weight: 400;
+$regular-weight: 500;
+$bold-weight: 700;
+
+$small-font: 65%;
+
+
+
+// ------------------------------------------------------------------------- //
+// 2. TYPEPLATE VARIABLES
+// ------------------------------------------------------------------------- //
+
+
+// TYPEPLATE $BaseType
+// -------------------------------------//
+
+// Make base-font size 16px
+$font-size: 100;
+
+// Use our lovely Typekit fonts
+$font-family: "ff-meta-serif-web-pro", "Georgia", serif;
+$font-family-sans: "freight-sans-pro", "Myriad Pro", "Helvetica Neue", "Helvetica", sans-serif;
+
+// And make use of Typekit recommended weight
+$font-weight: $regular-weight;
+
+
+// TYPEPLATE $Typescale
+// -------------------------------------//
+
+// Reset default scale according to 16px base
+$tera: 104;       // 16 × 6.5
+$giga: 80;        // 16 × 5
+$mega: 64;        // 16 × 4
+$alpha: 53.328;   // 16 × 3.3333
+$beta: 42.672;    // 16 × 2.6667
+$gamma: 32;       // 16 × 2
+$delta: 21.328;   // 16 × 1.3333
+$epsilon: 18.667; // 16 × 1.1667
+$zeta: 16;        // 16 × 1
+
+
+// TYPEPLATE $TypeScale-Unit
+// -------------------------------------//
+
+// Set in ems so that headings scale with responsive typography
+$type-scale-unit-value: em;
+
+
+// TYPEPLATE $Icon-Font-Helper
+// ----------------------------------- //
+$icon-fonts: (fizzy-icon-font);
+
+
+// TYPEPLATE $Small-Print
+// -------------------------------------//
+
+// This way we sync up the global variable w/ the Typeplate variable
+$small-print-size: $small-font;
+
+
+// ------------------------------------------------------------------------- //
+// 3. TYPEPLATE-DEPENDENT VARIABLES
+// ------------------------------------------------------------------------- //
+
+// HEADING VARIABLES
+// ----------------------------------- //
+$heading-font-family: $font-family-sans;
+$heading-font-weight: $bold-weight;

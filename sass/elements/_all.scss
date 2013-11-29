@@ -1,0 +1,18 @@
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+//
+// --------------------
+// IMPORT ALL ELEMENTS
+// --------------------
+//
+// Elements contain Sass code that doesn't cause Sass to actually output CSS.
+// They include things like mixin declarations, functions, and variables.
+// url: http://thesassway.com/beginner/how-to-structure-a-sass-project
+
+// Here we gather all elements, so they can be imported into _environment.scss
+//
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+
+@import "elements/colorVars";       // Set global color variables
+@import "elements/breakpointVars";  // Set breakpoint variables
+@import "elements/typeVars";        // Set global font and typeplate variables
+@import "elements/gridVars";        // Set susy grid variables

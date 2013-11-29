@@ -1,0 +1,67 @@
+/*!
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+ --------
+ LAYOUT
+ --------
+
+ Basic site-wide layout
+
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ */
+
+
+/* Containers
+   ----------------------------------- */
+
+// Set mobile-first container widths and center content
+.site-container,
+.copy-container,
+.hero-container {
+   width: 88%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+// Set responsive widths
+.site-container {
+    @include breakpoint($small-tablet) {
+        width: 80%;
+    }
+}
+
+.copy-container {
+    @include breakpoint($small-tablet) {
+        width: 80%;
+    }
+    @include breakpoint($large-tablet) {
+        width: 60%;
+    }
+    @include breakpoint($small-laptop) {
+        width: 50%;
+    }
+}
+
+.hero-container {
+    @include breakpoint($iPad) {
+        width: 100%;
+    }
+}
+
+// Set mobile-first container width and use susy grid
+.feature-container {
+   @include container(88%);
+}
+
+// Set responsive width with susy grid
+@include breakpoint($small-tablet) {
+    .feature-container {
+        @include container(80%);
+    }
+}
+
+/* Section Divisions
+   ----------------------------------- */
+article > section {
+    margin-bottom: 4em;
+}

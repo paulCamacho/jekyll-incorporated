@@ -1,0 +1,30 @@
+/*!
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+ -----------------
+ RELATED ARTICLE
+ -----------------
+
+ A minimal box, at content width, for displaying a blurb
+ Meant to go at the end of the page, just before the footer
+
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ */
+
+
+
+.related-article {
+    background-color: $related-background-color;
+    padding: 2em 0;
+    margin-top: 2em;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.related-intro {
+    font-family: $font-family-sans;
+    color: $meta-color;
+    margin-bottom: 1em;
+}

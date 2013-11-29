@@ -1,0 +1,142 @@
+/*!
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+ ------------
+ TYPOGRAPHY
+ ------------
+
+ Set the base typographic styles, and make the body type responsive
+
+ Many of the global settings have already been set via Typeplate
+ And variables can be adjusted readily in the _fonts.scss module
+
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ */
+
+
+/* Base typography
+   ----------------------------------- */
+
+body {
+    // enable ligatures and kerning
+    text-rendering: optimizeLegibility;
+    // Make fonts a bit smoother, where we can
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+p {
+    // Nice and spacious margins between paragraphs
+    margin: auto auto 2em;
+}
+
+%hN {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+
+    // Tighten up the kerning a bit
+    letter-spacing: -0.04em;
+
+    // Prevent headings from hyphenating
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -o-hyphens: none;
+    hyphens: none;
+
+}
+
+/* Responsive typography
+   ----------------------------------- */
+body {
+   @include breakpoint($small-tablet) {
+       font-size: 112.5%;  // 18px font
+   }
+   @include breakpoint($large-tablet) {
+       font-size: 125%; // 20px font
+   }
+   @include breakpoint($small-laptop) {
+       font-size: 137%; // 22px font
+   }
+   @include breakpoint($laptop) {
+       font-size: 150%; // 24px font
+   }
+   @include breakpoint($full-screen) {
+       font-size: 162.5%; // 26px font
+   }
+}
+
+/* Meta
+   ----------------------------------- */
+.meta {
+    color: $meta-color;
+    font-family: $font-family-sans;
+    line-height: 1;
+    font-weight: $light-weight;
+    margin-top: -1.6em;
+    margin-bottom: 2em;
+
+    a {
+        color: $meta-color;
+
+        &:hover{
+            color: $meta-hover-color;
+        }
+    }
+}
+
+/* Blockquotes
+   ----------------------------------- */
+blockquote {
+    font-style: italic;
+    margin: 0 auto;
+}
+
+blockquote > p {
+    font-style: italic;
+    padding-left: 1em;
+    border-left: 0.25em solid $block-quote-accent;
+    display: block;
+
+    em {
+        font-style: normal;
+    }
+}
+
+/* Pullquotes
+   ----------------------------------- */
+.pullquote > p{
+    padding: 0;
+    border: none;
+    line-height: 1.4;
+    text-align: center;
+    @extend .gamma;
+
+    @include breakpoint($small-tablet) {
+        margin-left: -15%;
+        margin-right: -15%;
+    }
+
+    @include breakpoint($large-tablet) {
+        margin-left: -3em;
+        margin-right: -3em;
+    }
+}
+
+
+/* Footnotes
+-------------------------------------------------------------- */
+.footnotes {
+    color: $footnote-color;
+    font-size: 0.875em;
+}
+
+/* Figure Captions
+   ----------------------------------- */
+figcaption {
+    @extend .meta;
+}
+
+/* Ampersands
+   ----------------------------------- */
+.ampersand { @extend %ampersand-placeholder; }

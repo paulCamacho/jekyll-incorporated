@@ -1,0 +1,73 @@
+/*!
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+ ------------------
+ CUSTOM ICON FONT
+ ------------------
+
+ Set up through the awesome icon font app IconMoo
+ url: http://icomoon.io/
+
+ The icon font itself is loaded through a Typeplate function
+ Which can be edited in the _typeVars.scss module
+
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ */
+
+
+/* Base icon set-up
+   ----------------------------------- */
+
+// Semantic use of icon fonts, friendly for screen-readers
+// url: http://css-tricks.com/html-for-icon-font-usage/
+
+[data-icon]:before {
+    font-family: 'fizzy-icon-font';
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+/* Stand-alone icon styles
+   ----------------------------------- */
+
+.icon {
+    display: inline-block;
+    font-size: 2.5em;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    line-height: 1.2;
+    text-align: center;
+    @include box-shadow(0 0 0 2px);
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.icon:hover {
+    opacity: 0.4;
+}
+
+/* Adjusted styles for specific icons
+   ----------------------------------- */
+
+.icon-twitter  {
+    padding-right: 0.2em;
+}
+
+.icon-mail {
+    padding-right: 0.3em;
+}
+
+.icon-rocket {
+    font-size: 2.2em;
+    width: 1.1em;
+    height: 1.1em;
+    line-height: 1.45;
+}

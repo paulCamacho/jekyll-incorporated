@@ -1,0 +1,20 @@
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+//
+// ---------------
+// GRID SETTINGS
+// ---------------
+//
+// Setting defaults for Susy Next grid helper
+// url: http://oddbird.net/2013/05/03/susy-next-alpha-2/
+//
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+
+
+// Different grid layouts
+// ----------------------------------- //
+$base-grid: 100% 12 1/4 fluid;
+
+
+// Set the default grid
+// ----------------------------------- //
+@include set-grid($base-grid hide);

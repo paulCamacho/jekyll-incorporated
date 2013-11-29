@@ -1,0 +1,21 @@
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+//
+// ----------------------
+// BREAKPOINT VARIABLES
+// ----------------------
+//
+// Media-query variables for use with the Breakpoint Compass extention
+// url: http://breakpoint-sass.com/
+
+// Values set in ems, and borrowed lovingly from Trent Walton
+// url: http://trentwalton.com/
+//
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+
+$iPhone:        20em;           // 320px
+$small-tablet:  37.5em;         // 600px
+$iPad:          48em;           // 768px
+$large-tablet:  50em;           // 800px
+$small-laptop:  64.375em;       // 1030px
+$laptop:        75em;           // 1200px
+$full-screen:   106.875em;      // 1710px

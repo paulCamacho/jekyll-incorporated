@@ -1,0 +1,107 @@
+/*!
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+ ----------
+ FEATURES
+ ----------
+
+ Mobile-first, responsive image and text pairs
+ That stack to single column at smaller viewports
+ Then alternate left-right on a grid
+
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ */
+
+// Set the overall spacing options
+.features {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.feature {
+    padding-top: 2em;
+}
+
+// Set single-column (mobile) first styles
+
+@include breakpoint(max-width 767px) {      // everything before iPad width
+    .feature h2,
+    .feature-image {
+        text-align: center;
+    }
+}
+
+// Roll the susy spans to alternate layouts
+.feature-left {
+    @include breakpoint($iPad) {
+        .feature-image {
+            @include span(last 5 of 10);
+        }
+        .feature-description {
+            @include span(5 of 10);
+        }
+    }
+}
+
+.feature-right {
+    @include breakpoint($iPad) {
+        .feature-image {
+            @include span(5 of 10);
+        }
+        .feature-description {
+            @include span(last 5 of 10);
+        }
+    }
+}
+
+// Make featured images match p bottom margines
+.feature-image {
+    margin-bottom: 2em;
+}
+
+// Keep the features from bumping into one another
+.feature-divider {
+    clear: both;
+    border: none;
+    margin: 0;
+    padding: 1em;
+    background-color: $page-background-color;
+}
+
+
+/* -------------------------------------------------------------------------
+   Adjust individual featured images
+   ------------------------------------------------------------------------- */
+
+@include breakpoint($iPad $small-laptop) {
+    #feature-img-dialogue,
+    #feature-img-simple,
+    #feature-img-communicate,
+    #feature-img-responsive,
+    #feature-img-search {
+        margin-top: 2em;
+    }
+}
+
+@include breakpoint($large-tablet $small-laptop) {
+    #feature-img-responsive,
+    #feature-img-search {
+        margin-top: 1em;
+    }
+}
+
+@include breakpoint($laptop) {
+    #feature-img-simple,
+    #feature-img-dialogue {
+       margin-top: -0.5em;
+    }
+}
+
+#feature-img-smart {
+    @include breakpoint($iPad $laptop) {
+       margin-top: 6em;
+    }
+    @include breakpoint($laptop) {
+        margin-top: 4em;
+    }
+}

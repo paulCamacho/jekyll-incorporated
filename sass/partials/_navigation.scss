@@ -1,0 +1,38 @@
+/*!
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+ ------------
+ NAVIGATION
+ ------------
+
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ */
+
+
+nav {
+
+    padding-top: 20px;
+
+    ul{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        line-height: 1;
+
+        @include breakpoint($iPad) {
+            text-align: right;
+        }
+
+        li{
+            display: -moz-inline-stack;
+            display: inline-block;
+            zoom: 1;
+            margin-right: 11%;
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}

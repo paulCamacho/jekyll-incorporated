@@ -1,0 +1,84 @@
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+//
+// -----------------
+// COLOR VARIABLES
+// -----------------
+//
+// Sacha Grief proposes the following two-tier system
+// to handle color variables in Sass
+
+// url: http://sachagreif.com/sass-color-variables/
+//
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+
+
+// ------------------------------------------------------------------------- //
+// DESCRIPTIVE COLORS
+// ------------------------------------------------------------------------- //
+
+
+$fizzy-pink:   		#ff6666;
+$dark-pink:    		#ff4d4d;
+
+$dark-grey-warm:    #231F20;
+$medium-grey-warm:  #504F50;
+$light-grey-warm:   #B7B7B7;
+
+$charcoal:          #333333;
+$middle-grey:       #808080;
+
+$white:             #ffffff;
+$off-white:         #f9f9f7;
+
+
+
+// ------------------------------------------------------------------------- //
+// FUNCTIONAL COLORS
+// ------------------------------------------------------------------------- //
+
+
+// Typeplate Variables
+// ----------------------------------- //
+
+$body-copy-color: 	        $medium-grey-warm;
+$heading-color:             $dark-grey-warm;
+
+
+// Base Link Variables
+// ----------------------------------- //
+
+$link-color:                $fizzy-pink;
+$link-hover-color:          $dark-pink;
+
+$heading-link-color:        $heading-color;
+$heading-hover-color:       $link-color;
+
+
+// Module Variables
+// ----------------------------------- //
+
+$nav-color:       	        $white;
+$nav-hover-color:           $dark-pink;
+
+$hero-color:                $white;
+
+$meta-color:                $light-grey-warm;
+$meta-hover-color:          $link-color;
+
+$footer-color:              $middle-grey;
+$footer-link-color:         $white;
+
+$header-background-color:   $fizzy-pink;
+$page-background-color:     $white;
+$footer-background-color:   $charcoal;
+
+$block-quote-accent:        $fizzy-pink;
+
+$footnote-color:            $light-grey-warm;
+
+$related-background-color:  $off-white;
+
+$grid-caption-background:   $charcoal;
+$grid-caption-text:         $white;
+$grid-caption-button:       $fizzy-pink;
+$grid-caption-button-text:  $white;

@@ -1,0 +1,71 @@
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+//
+// --------------------
+// PRIMARY STYLESHEET
+// --------------------
+//
+// Intentionally kept extremely clean, organized by:
+//
+//      1. Elements ... Variables, Mixins, Functions
+//
+//        1.5 Resets .. (Includes a partial and some vendors)
+//
+//      2. Vendors .... Pre-packaged third-party styles, left "as-is"
+//      3. Partials ... The "meat" of the CSS, broken down by SMACCS principles
+//
+// Following basic guidelines here:
+//
+//     http://thesassway.com/beginner/how-to-structure-a-sass-project
+//     http://smacss.com/
+//
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* //
+
+
+// ------------------------------------------------------------------------- //
+// 1. ELEMENTS
+// ------------------------------------------------------------------------- //
+
+@import "partials/environment"; // Gather elements into Sass environment
+
+
+// ------------------------------------------------------------------------- //
+// 1.5 RESETS
+// ------------------------------------------------------------------------- //
+
+@import "partials/reset";
+@import "vendor/normalize"; // Vendor
+@import "vendor/html5bp";   // Vendor
+
+
+// ------------------------------------------------------------------------- //
+// 2. VENDORS
+// ------------------------------------------------------------------------- //
+
+@import "vendor/typeplate";
+
+
+// ------------------------------------------------------------------------- //
+// 3. PARTIALS
+// ------------------------------------------------------------------------- //
+
+// Base (Styles that apply across the site)
+@import "partials/base-typography";
+@import "partials/base-links";
+@import "partials/base-images";
+
+// Layout (Mobile-first responsive structure)
+@import "partials/layout";
+@import "partials/header";
+@import "partials/footer";
+
+@import "partials/post-list";
+@import "partials/post";
+@import "partials/about";
+
+// Modules (Re-usable blocks)
+@import "partials/navigation";
+@import "partials/heroimage";
+@import "partials/features";
+@import "partials/icons";
+@import "partials/related-article";
+@import "partials/grid-with-captions";

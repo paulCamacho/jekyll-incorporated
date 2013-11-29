@@ -1,0 +1,125 @@
+/*!
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+ --------------------
+ GRID WITH CAPTIONS
+ --------------------
+
+ Responsive grid layout and caption animations via Codrops
+
+ url: http://tympanus.net/codrops/2013/06/18/caption-hover-effects/
+
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ */
+
+
+/* Grid Styles
+   ----------------------------------- */
+
+.grid {
+    padding: 0 0 4em;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+}
+
+.grid li {
+    display: inline-block;
+    width: 98%;
+    margin: 0;
+    padding: 2% 1%;
+    text-align: left;
+    position: relative;
+}
+
+@include breakpoint($iPad) {
+    .grid li {
+
+        width: 46%;
+
+        padding: 1% 0;
+
+        &:nth-child(odd) {
+            padding-right: 1%;
+        }
+
+        &:nth-child(even) {
+            padding-left: 1%;
+        }
+    }
+}
+
+.grid figure {
+    margin: 0;
+    position: relative;
+}
+
+.grid figure img {
+    max-width: 100%;
+    display: block;
+    position: relative;
+}
+
+.grid figcaption {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    padding: 20px;
+    background: $grid-caption-background;
+    color: $grid-caption-text;
+
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.grid figcaption h3 {
+    margin: 0;
+    padding: 0;
+    color: $grid-caption-text;
+}
+
+.grid figcaption a {
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: $grid-caption-button;
+    color: $grid-caption-button-text;
+}
+
+
+/* Caption Styles
+   ----------------------------------- */
+
+.grid-caption figure {
+    overflow: hidden;
+}
+
+.grid-caption figure img {
+    @include single-transition(transform, 0.4s);
+}
+
+.no-touch .grid-caption figure:hover img,
+.grid-caption figure.cs-hover img {
+    @include translate(0px, -50px);
+}
+
+.grid-caption figcaption {
+    opacity: 0;
+    @include translate(0px, 100%);
+    @include transition(transform 0.4s, opacity 0.1s 0.3s);
+}
+
+.no-touch .grid-caption figure:hover figcaption,
+.grid-caption figure.cs-hover figcaption {
+    opacity: 1;
+    @include translate(0px, 0px);
+    @include transition(transform 0.4s, opacity 0.1s);
+}
