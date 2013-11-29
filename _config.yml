@@ -49,7 +49,7 @@ destination: ./_site
 plugins:     ./_plugins
 layouts:     ./_layouts
 include:     ['.htaccess']
-exclude:     ['codekit-config.json', 'config.rb', 'Gemfile', 'Gemfile.lock', 'Rakefile']
+exclude:     ['codekit-config.json', 'config.rb', 'Gemfile', 'Gemfile.lock', 'Rakefile', 'doc', 'jekyll-incorportated-originals']
 # The following line let us use compass --watch or codekit to process the scss
 keep_files:  ['css']
 timezone:    nil
@@ -82,8 +82,8 @@ maruku:
   use_tex:    false
   use_divs:   false
   png_engine: blahtex
-  png_dir:    images/latex
-  png_url:    /images/latex
+  png_dir:    img/latex
+  png_url:    /img/latex
 
 rdiscount:
   extensions: []
