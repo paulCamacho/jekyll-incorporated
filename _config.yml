@@ -1,12 +1,9 @@
-inc:
-  # Company information
-  company:      Fizzy Inc.
-  url:          http://fizzyinc.com/
+fizzy-inc:
 
   # Site Information
+  company:      Fizzy Inc.
   title:        "We Are Digital Storytellers"
   subtitle:     "We build websites that engage your users and add value to your brand."
-  tagline:      "Let's build something awesome together"
   cover_image:  mountaineer.jpg
   logo:         logo.png
 
@@ -14,10 +11,7 @@ inc:
   facebook:     fizzymedia
   twitter:      fizzymedia
   gplus:
-
-  # Internal Links
-  about_link:   http://fizzyinc.com/about
-  product_link: http://fizzyinc.com/services
+  email:        hello@fizzyinc.com
 
   # Comments
   disqus:
