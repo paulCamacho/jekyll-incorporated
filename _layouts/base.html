@@ -1,77 +1,90 @@
 <!DOCTYPE html>
 <html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} &mdash; {{ site.inc.title }}{% else %}{{ site.inc.title }} &mdash; {{ site.inc.subtitle }}{% endif %}</title>
-    {% if site.inc.google_font %}<link href="https://fonts.googleapis.com/css?family={{ site.inc.google_font }}" rel="stylesheet" type="text/css">{% endif %}
-    <link rel="stylesheet" type="text.css" href=" {{ site.baseurl }}/css/main.css">
+    <title>{% if page.title %}{{ page.title }} &mdash; {{ site.fizzy-inc.title }}{% else %}{{ site.fizzy-inc.title }} &mdash; {{ site.fizzy-inc.subtitle }}{% endif %}</title>
+    {% if site.fizzy-inc.google_font %}<link href="https://fonts.googleapis.com/css?family={{ site.fizzy-inc.google_font }}" rel="stylesheet" type="text/css">{% endif %}
+    <link rel="stylesheet" type="text.css" href=" {{ site.url }}/css/main.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/images/{{ site.inc.logo }}"/>
-    <link href="{{ site_url }}/feed.xml" rel="alternate" type="application/rss+xml" title="{{ site.inc.title }}" />
-    <meta name="title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.inc.title }}{% endif %}">
+    <link rel="apple-touch-icon" href="/images/{{ site.fizzy-inc.logo }}"/>
+    <link href="{{ site_url }}/feed.xml" rel="alternate" type="application/rss+xml" title="{{ site.fizzy-inc.title }}" />
+    <meta name="title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.fizzy-inc.title }}{% endif %}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    {% if page.site.gplus %}<link rel="publisher" href="https://plus.google.com/{{ site.inc.gplus }}">{% endif %}
+    {% if page.site.gplus %}<link rel="publisher" href="https://plus.google.com/{{ site.fizzy-inc.gplus }}">{% endif %}
     {% if page.author.gplus %}<link rel="author" href="https://plus.google.com/{{ page.author.gplus }}">{% endif %}
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.inc.title }}{% endif %}"/>
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.fizzy-inc.title }}{% endif %}"/>
     <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
     {% if page.cover_image %}
     <meta property="og:image" content="{{ site.url }}/images/{{ page.cover_image }}"/>
     {% if page.main_image %}
     <meta property="og:image" content="{{ site.url }}/images/{{ page.main_image }}"/>
     {% endif %}
-    <meta property="og:image" content="{{ site.url }}/images/{{ site.inc.logo }}"/>
+    <meta property="og:image" content="{{ site.url }}/images/{{ site.fizzy-inc.logo }}"/>
     {% endif %}
     {% if page.excerpt %}
     <meta property="og:description" content="{{ page.excerpt }}"/>
     <meta name="description" content="{{ page.excerpt }}"/>
     {% endif %}
-    <meta property="og:site_name" content="{{ site.inc.title }}">
+    <meta property="og:site_name" content="{{ site.fizzy-inc.title }}">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/knu7xjh.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
+
 <body>
 
-<section class="site-nav">
-    <header>
-        <nav id="navigation">
-            <a class="brand" href="/">
-                <img src="{{ site.baseurl }}/images/{{ site.inc.logo }}" alt="Inc">
-            </a>
-            <a href="{{ site.baseurl }}/blog" class="home">Blog</a>
-            {% if site.inc.product_link %}<a href="{{ site.inc.product_link }}">Product</a>{% endif %}
-            {% if site.inc.about_link %}<a href="{{ site.inc.about_link }}">About</a>{% endif %}
+<!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+<header class="header clearfix">
+    <div class="site-container">
+        <a href="{{ site.url }}" rel="home">
+            <img class="logo" src="/img/{{ site.fizzy-inc.logo }}" alt="Fizzy Media">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/work.html">Work</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+            </ul>
         </nav>
-        {% if site.inc.tagline or site.inc.product_url %}<nav class="tagline">
-            {% if site.inc.tagline %}<span>{{ site.inc.tagline }}</span>{% endif %}
-            {% if site.inc.product_link %}<a href="{{ site.inc.product_link }}" class="btn btn-outline">Learn More</a>{% endif %}
-        </nav>{% endif %}
-    </header>
-</section>
+    </div>
+</header>
 
 {{ content }}
 
-<footer class="site-footer">
-    <div class="container">
-        &copy; {{ site.time | date: "%Y" }}
+<footer>
+    <div class="copy-container">
+        <p>Fizzy Media is a different kind of web development agency. We are passionate about building a more human internet, one site at a time. Let’s build something awesome together.</p>
 
-        <nav>
-            <a href="{{ site.inc.url }}">{{ site.inc.company }}</a> &middot;
-            <a href="{{ site.baseurl }}">Blog</a> &middot;
-            {% if site.inc.product_link %}<a href="{{ site.inc.product_link }}">Product</a> &middot; {% endif %}
-            {% if site.inc.about_link %}<a href="{{ site.inc.about_link }}">About</a>{% endif %}
-        </nav>
+        <ul class="contact">
+            {% if site.fizzy-inc.email %}
+            <li><a href="mailto:{{ site.fizzy-inc.email }}?Subject=New%20Collaborative%20Project" ><span aria-hidden="true" data-icon="&#xe003;" class="icon-twitter"></span>{{ site.fizzy-inc.email }}</a></li>
+            {% endif %}
 
-        <nav class="social">
-            {% if site.inc.twitter %}
-            <a href="https://twitter.com/{{ site.inc.twitter }}" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            {% if site.fizzy-inc.twitter %}
+            <li><a href="https://twitter.com/{{ site.fizzy-inc.twitter }}" title="Follow Fizzy on Twitter" target="_blank"><span aria-hidden="true" data-icon="&#xe002;" class="icon-twitter"></span>{{ site.fizzy-inc.twitter }}</a></li>
             {% endif %}
-            {% if site.inc.facebook %}
-            <a href="http://facebook.com/{{ site.inc.facebook }}" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
-            {% endif %}
-            <a href="{{ site.baseurl }}/feed.xml" title="RSS Feed">
-                <i class="icon icon-rss black"></i>
+        </ul>
+
+        <div class="to-top">
+            <a href="#" class="icon icon-rocket">
+                <span aria-hidden="true" data-icon="&#xe001;"></span>
+                <span class="visuallyhidden">Scroll up to learn more</span>
             </a>
-        </nav>
-        <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
+        </div>
+
+        <p class="colophon">This site was hand-crafted with love in HTML5 and CSS3. It is super-powered with Compass, Sass, Susy, HTML5 Boilerplate, Modernizr, Wordpress, the Bones WP theme, Typeplate, FF Meta Serif Web Pro and and FF Meta Web Pro fonts from Typekit. Special thanks to this person and that person, who inspire and delight us daily.</p>
+
+        <p class="copyright">© 2013 Fizzy Media, LLC</p>
+
     </div>
 </footer>
 
