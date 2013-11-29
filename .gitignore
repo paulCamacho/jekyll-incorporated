@@ -1,5 +1,3 @@
-_site/
-.DS_Store
 .sass-cache# ignore Mac OS X Desktop Service Store
 .DS_Store
 
@@ -8,3 +6,6 @@ wp-content/debug.log
 
 # ignore sass-cache
 /.sass-cache/*
+
+# ignore Jekyll-generated site directory
+_site/
