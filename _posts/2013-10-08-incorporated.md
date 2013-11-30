@@ -100,7 +100,7 @@ inc:
 {% endhighlight %}
 
 **Zoomable images**
-<div class="full zoomable"><img src="{{ site.baseurl }}/images/incorporated.jpg"></div>
+<div class="full zoomable"><img src="/img/incorporated.jpg"></div>
 
 **Awesome quotes**
 > “Effective companies tend to communicate more, their people are curious and they have opinions”
