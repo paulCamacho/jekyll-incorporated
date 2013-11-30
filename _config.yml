@@ -54,7 +54,7 @@ pygments:    true
 
 relative_permalinks: true
 
-permalink:     "/blog/:categories/:year/:month/:day/:title.html"
+permalink:     "/blog/:title/"
 paginate_path: 'blog/page:num'
 paginate: 10
 
