@@ -1,0 +1,4 @@
+# The production config file sets production-level variables
+# (At this point just the url, but we could add others)
+
+url:         http://fizzyinc.com

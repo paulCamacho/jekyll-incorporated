@@ -35,16 +35,19 @@ fizzy-inc:
   # eg. 'Droid+Sans:400,700|Droid+Serif:400,700'
   google_font: 'Droid+Sans:400,700'
 
-url:         http://fizzyinc.com
+
+# Base directory settings
+# Site.url is set separately in development and production config files
 source:      .
 destination: ./_site
 plugins:     ./_plugins
 layouts:     ./_layouts
 include:     ['.htaccess']
 exclude:     ['codekit-config.json', 'config.rb', 'Gemfile', 'Gemfile.lock', 'Rakefile', 'doc', 'jekyll-incorportated-originals']
+timezone:    nil
+
 # The following line let us use compass --watch or codekit to process the scss
 keep_files:  ['css']
-timezone:    nil
 
 # Show future posts
 future:      false
