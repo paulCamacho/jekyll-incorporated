@@ -5,7 +5,7 @@
 wp-content/debug.log
 
 # ignore sass-cache
-.sass-cache/
+*.sass-cache*
 
 # ignore Jekyll-generated site directory
 _site/
